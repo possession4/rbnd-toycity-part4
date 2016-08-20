@@ -90,7 +90,9 @@ class Udacidata
 	end
 
 	def self.where(options = {})
-		self.all.select { |p| p.brand == options[:brand] }		
+		self.all.select do |p|
+			p.brand == options[:brand] || p.name == options[:name]
+		end		
 	end
 
 	def update(options = {})
