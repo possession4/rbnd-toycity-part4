@@ -1,0 +1,4 @@
+.DS_Store
+
+# Database files
+data/data.csv
