@@ -70,12 +70,19 @@ class Udacidata
 	end
 
 	def self.find(id)
-		self.all.find { |product|  product.id == id }
+		product =
+			self.all.find { |product|  product.id == id }
+		if product.nil?
+			raise ProductNotFoundError, "Product ID #{id} not found." 
+		end
+		product
 	end
 
 	def self.destroy(id)
 		deleted_product = self.find(id)
-		unless deleted_product.nil?
+		if deleted_product.nil?
+			raise ProductNotFoundError, "Product ID #{id} not found." 
+		else
 			product_array = CSV.read(@@data_path)
 			new_product_array = product_array.delete_if do |prod|
 				prod[0] == id.to_s
