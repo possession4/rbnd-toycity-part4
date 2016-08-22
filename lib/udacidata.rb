@@ -128,4 +128,10 @@ class Udacidata
 
 		self
 	end
+
+	def print_products(products =[])
+		products.each do |product|
+			print "ID: #{product.id}, BRAND: #{product.brand}"
+		end
+	end
 end
