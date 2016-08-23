@@ -14,9 +14,9 @@ module Analyzable
 
 		unless brands.nil?
 			if brands.is_a? Hash
-				brands.map { |key, value| puts "  - #{k}: #{v}"}
+				brands.map { |key, value| puts "  - #{key}: #{value}"}
 			else
-				brands.map { |count| count.map { |key, value| puts "  - #{k}: #{v}"} }
+				brands.map { |count| count.map { |key, value| puts "  - #{key}: #{value}"} }
 			end
 		end
 
@@ -25,9 +25,9 @@ module Analyzable
 
 		unless name.nil?
 			if name.is_a? Hash
-				name.map { |key, value| puts "  - #{k}: #{v}"}
+				name.map { |key, value| puts "  - #{key}: #{value}"}
 			else
-				name.map { |count| count.map { |key, value| puts "  - #{k}: #{v}"} }
+				name.map { |count| count.map { |key, value| puts "  - #{key}: #{value}"} }
 			end
 		end
 

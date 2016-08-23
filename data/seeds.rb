@@ -4,7 +4,7 @@ require 'faker'
 # fake data for testing purposes
 
 def db_seed
-  20.times do |i|
+  10.times do |i|
   	Product.create(
   				id: (i + 1).to_s,
   				brand: Faker::Company.name,
